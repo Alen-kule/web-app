@@ -1,0 +1,66 @@
+﻿@model Web.Entities.Models.InvoiceDetails
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>InvoiceDetails</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Charge.ChargeName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Charge.ChargeName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Invoice.InvoiceNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Invoice.InvoiceNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Rate)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Rate)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Units)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Units)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Tax)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Tax)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
